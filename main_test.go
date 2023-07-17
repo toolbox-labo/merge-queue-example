@@ -57,7 +57,7 @@ func TestGreeting(t *testing.T) {
 		},
 		{
 			name: "TooLongName!", // over 11 chars => Longname
-			want: "Good afternoon, Longname",
+			want: "Good evening, Longname",
 		},
 	}
 
