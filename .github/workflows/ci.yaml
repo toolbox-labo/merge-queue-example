@@ -2,14 +2,8 @@ name: ci
 
 on:
   push:
-    branches:
-      - "*"
   pull_request:
-    branches:
-      - "*"
   merge_group:
-    types:
-      - "checks_requested"
 
 jobs:
   ci:
