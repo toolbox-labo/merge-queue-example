@@ -18,5 +18,8 @@ func getMSG(d *time.Time) string {
 }
 
 func greeting(name string, d *time.Time) string {
+	if len(name) > 11 {
+		name = "Longname"
+	}
 	return fmt.Sprintf("%s, %s", getMSG(d), name)
 }
