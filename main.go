@@ -13,8 +13,6 @@ func main() {
 func getMSG(d *time.Time) string {
 	if d.Hour() <= 12 {
 		return "Good morning"
-	} else if d.Hour() >= 18 {
-		return "Good evening"
 	}
 	return "Good afternoon"
 }
