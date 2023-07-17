@@ -50,6 +50,10 @@ func TestGreeting(t *testing.T) {
 			name: "Tarou",
 			want: "Good afternoon, Tarou",
 		},
+		{
+			name: "TooLongName!", // over 11 chars => Longname
+			want: "Good afternoon, Longname",
+		},
 	}
 
 	for _, tt := range tests {
