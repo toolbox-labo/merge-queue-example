@@ -11,5 +11,5 @@ func getMSG() string {
 }
 
 func greeting(name string) string {
-	return fmt.Sprintf("%s, %s", getMSG(), name)
+	return fmt.Sprintf("%s, %s!", getMSG(), name)
 }
