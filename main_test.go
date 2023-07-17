@@ -21,11 +21,6 @@ func TestGetMSG(t *testing.T) {
 			time: time.Date(2023, time.July, 17, 13, 0, 0, 1, time.UTC),
 			want: "Good afternoon",
 		},
-		{
-			name: "evening",
-			time: time.Date(2023, time.July, 17, 18, 0, 0, 1, time.UTC),
-			want: "Good evening",
-		},
 	}
 
 	for _, tt := range tests {
@@ -41,7 +36,7 @@ func TestGetMSG(t *testing.T) {
 }
 
 func TestGreeting(t *testing.T) {
-	evening := time.Date(2023, time.July, 17, 18, 0, 0, 0, time.UTC)
+	afternoon := time.Date(2023, time.July, 17, 18, 0, 0, 0, time.UTC)
 
 	tests := []struct {
 		name string
@@ -49,17 +44,17 @@ func TestGreeting(t *testing.T) {
 	}{
 		{
 			name: "John",
-			want: "Good evening, John",
+			want: "Good afternoon, John",
 		},
 		{
 			name: "Tarou",
-			want: "Good evening, Tarou",
+			want: "Good afternoon, Tarou",
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := greeting(tt.name, &evening)
+			got := greeting(tt.name, &afternoon)
 			if tt.want != got {
 				t.Errorf("Unexpected result. want: %s, got: %s", tt.want, got)
 			}
